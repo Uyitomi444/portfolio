@@ -14,20 +14,20 @@ export function Hero() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="space-y-6 order-2 md:order-1"
+                    className="space-y-6 order-2 md:order-1 text-center md:text-left"
                 >
                     <span className="text-muted-foreground text-lg tracking-wide">
                         My name is Uyitomi.
                     </span>
-                    <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground leading-[1.1]">
+                    <h1 className="text-4xl md:text-7xl font-bold tracking-tight text-foreground leading-[1.1]">
                         I turn ideas into <br />
                         <span className="text-muted-foreground">clean, thoughtful</span> digital experiences.
                     </h1>
-                    <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed">
+                    <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed mx-auto md:mx-0">
                         A creative mind focused on building simple, intentional digital solutions.
                     </p>
 
-                    <div className="flex gap-4 pt-4">
+                    <div className="flex justify-center md:justify-start gap-4 pt-4">
                         <Button asChild size="lg" className="rounded-full px-8">
                             <a href="#projects">View Work</a>
                         </Button>
@@ -40,7 +40,7 @@ export function Hero() {
                 </motion.div>
 
                 {/* Right Side: Spline 3D Scene */}
-                <div className="order-1 md:order-2 flex justify-center md:justify-end h-[400px] md:h-[600px] w-full relative">
+                <div className="order-1 md:order-2 flex justify-center md:justify-end h-[300px] md:h-[600px] w-full relative">
                     <SplineScene
                         scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
                         className="w-full h-full"

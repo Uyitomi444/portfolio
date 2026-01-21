@@ -78,10 +78,16 @@ export function Navbar() {
                 </div>
             </div>
 
-            {/* Optional: Floating Mobile Nav could go here if requested, 
-                but keeping it simple per "interaction with standard layout" instructions 
-                rendering ExpandableTabs on mobile might take too much width.
-            */}
+            {/* Mobile Navigation Dock */}
+            <div className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-[400px]">
+                <div className="flex justify-center w-full">
+                    <ExpandableTabs
+                        tabs={tabs.map(t => ({ title: t.title, icon: t.icon }))}
+                        onChange={handleTabChange}
+                        className="bg-background/80 backdrop-blur-lg border-border/50 shadow-2xl w-full justify-between"
+                    />
+                </div>
+            </div>
         </header>
     )
 }
