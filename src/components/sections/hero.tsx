@@ -7,7 +7,7 @@ import { SplineScene } from "@/components/ui/spline-scene"
 
 export function Hero() {
     return (
-        <section className="min-h-screen flex flex-col justify-center relative pt-20 overflow-hidden">
+        <section className="min-h-screen flex flex-col justify-center relative pt-20 pb-24 overflow-hidden">
             <div className="container px-4 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
                 {/* Left Side: Text */}
                 <motion.div
