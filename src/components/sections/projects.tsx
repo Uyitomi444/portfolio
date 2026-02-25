@@ -10,7 +10,7 @@ const projects = [
         title: "Aurea",
         description: "Timeless heirloom pieces crafted for modern royalty. Each piece in the Imperial Gold Series carries centuries of artisan heritage — sculpted, polished, and set by hand.",
         tags: ["Luxury Jewelry", "Handcrafted", "Heritage"],
-        image: "/projects/aurea.png",
+        image: "/projects/aurea.svg",
         link: "https://aurea-jewelry.vercel.app/",
     },
     {
