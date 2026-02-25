@@ -1,5 +1,5 @@
 import * as React from "react"
-
+import { Slot } from "@radix-ui/react-slot"
 import { cn } from "@/lib/utils"
 
 export interface ButtonProps
@@ -11,12 +11,7 @@ export interface ButtonProps
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ({ className, variant = "default", size = "default", asChild = false, ...props }, ref) => {
-        // Basic implementation since we didn't install cva or radix-slot yet, 
-        // actually I should check if I installed radix-slot. 
-        // I haven't. I'll stick to a standard button without Slot for now or just wrapping children.
-        // I'll make it simple.
-
-        const Comp = "button" // simplification as I missed installing @radix-ui/react-slot
+        const Comp = asChild ? Slot : "button"
 
         const baseStyles = "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
 
@@ -35,7 +30,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         }
 
         return (
-            <button
+            <Comp
                 className={cn(baseStyles, variants[variant], sizes[size], className)}
                 ref={ref}
                 {...props}
