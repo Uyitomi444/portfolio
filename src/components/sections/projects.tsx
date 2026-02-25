@@ -7,6 +7,13 @@ import { ExternalLink } from "lucide-react"
 
 const projects = [
     {
+        title: "Aurea",
+        description: "Timeless heirloom pieces crafted for modern royalty. Each piece in the Imperial Gold Series carries centuries of artisan heritage — sculpted, polished, and set by hand.",
+        tags: ["Luxury Jewelry", "Handcrafted", "Heritage"],
+        image: "/projects/aurea.png",
+        link: "https://aurea-jewelry.vercel.app/",
+    },
+    {
         title: "LagosFit",
         description: "The smart way to find your perfect neighborhood in Lagos. Data-driven, honest, and easy.",
         tags: ["React", "Data Visualization", "Real Estate"],
@@ -19,27 +26,6 @@ const projects = [
         tags: ["React", "Node.js", "AI Integration"],
         image: "/projects/declutterhub.png",
         link: "https://elizade-marketplace.vercel.app/",
-    },
-    {
-        title: "Declutterhub.ng",
-        description: "Premium Nigerian marketplace platform designed to help individuals and businesses turn unused items into cash.",
-        tags: ["Next.js", "Marketplace", "Commerce"],
-        image: "/projects/medicare.png",
-        link: "https://declutterhub-ng.vercel.app/",
-    },
-    {
-        title: "MEDICARE-SOLUTIONS-HUB",
-        description: "Futuristic digital health platform combining AI-powered telemedicine, medical supply marketplace, and health insights.",
-        tags: ["HealthTech", "AI", "Platform"],
-        image: "/projects/trailblazers.png",
-        link: "https://medicare-solution-hub.vercel.app/",
-    },
-    {
-        title: "Trailblazers-25",
-        description: "Digital yearbook web app allowing students to create profiles, share memories, and leave messages.",
-        tags: ["Social", "Interactive", "Web App"],
-        image: "/projects/elizade.png",
-        link: "https://trailblazers-25.vercel.app/",
     },
 ]
 
