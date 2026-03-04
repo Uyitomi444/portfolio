@@ -27,6 +27,13 @@ const projects = [
         image: "/projects/declutterhub.png",
         link: "https://elizade-marketplace.vercel.app/",
     },
+    {
+        title: "Illuminant",
+        description: "AI-Powered Solar Inverters for Reliable Energy in Nigeria.",
+        tags: ["AI", "Solar Energy", "CleanTech"],
+        image: "/projects/illuminant.png",
+        link: "https://illuminant.netlify.app/",
+    },
 ]
 
 export function Projects() {
