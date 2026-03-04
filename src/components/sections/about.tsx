@@ -29,12 +29,12 @@ export function About() {
 
                     {/* Profile Image */}
                     <div className="flex justify-center md:justify-end order-1 md:order-2">
-                        <div className="relative w-64 h-64 md:w-[350px] md:h-[400px] rounded-2xl overflow-hidden border border-border shadow-2xl grayscale hover:grayscale-0 transition-all duration-500">
+                        <div className="relative w-64 h-64 md:w-[350px] md:h-[400px] rounded-2xl overflow-hidden border border-border shadow-2xl transition-all duration-500">
                             <Image
                                 src="/profile.jpg"
                                 alt="Uyitomi Adebiyi"
                                 fill
-                                className="object-cover"
+                                className="object-cover object-center"
                             />
                         </div>
                     </div>

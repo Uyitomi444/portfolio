@@ -13,7 +13,12 @@ export function Hero() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="space-y-6 order-2 md:order-1 text-center md:text-left"
+                    className={cn(
+                        "fixed top-0 w-full z-50 transition-all duration-300",
+                        scrolled
+                            ? "bg-black/95 border-b border-border/50 py-2 shadow-lg backdrop-blur-md"
+                            : "bg-transparent py-4 md:py-6"
+                    )}
                 >
                     <span className="text-muted-foreground text-lg tracking-wide">
                         My name is Uyitomi.
@@ -58,7 +63,7 @@ export function Hero() {
                         <img
                             src="/profile.jpg"
                             alt="Uyitomi Adebiyi"
-                            className="w-full h-full object-cover object-top scale-110 transition-transform duration-500 group-hover:scale-115"
+                            className="w-full h-full object-cover object-center scale-110 transition-transform duration-500 group-hover:scale-115"
                         />
                     </motion.div>
                 </div>

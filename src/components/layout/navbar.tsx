@@ -51,12 +51,12 @@ export function Navbar() {
             className={cn(
                 "fixed top-0 w-full z-50 transition-all duration-300",
                 scrolled
-                    ? "bg-background/80 backdrop-blur-md border-b border-border/50 py-2 shadow-sm"
+                    ? "bg-zinc-950/95 backdrop-blur-md border-b border-white/10 py-2 shadow-sm"
                     : "bg-transparent py-4 md:py-6"
             )}
         >
             <div className="container mx-auto px-4 flex items-center justify-between">
-                <Link href="/" className="text-lg md:text-xl font-bold tracking-tight z-50">
+                <Link href="/" className={cn("text-lg md:text-xl font-bold tracking-tight z-50 transition-colors duration-300", scrolled && "text-white")}>
                     Welcome to my portfolio
                 </Link>
 
