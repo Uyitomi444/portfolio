@@ -34,6 +34,13 @@ const projects = [
         image: "/projects/illuminant.png",
         link: "https://illuminant.netlify.app/",
     },
+    {
+        title: "DUSLANG",
+        description: "Premier cyber security firm securing your digital future with unbreakable defenses — safeguarding assets, mitigating risks, and ensuring regulatory compliance.",
+        tags: ["Cyber Security", "Risk Management", "Compliance"],
+        image: "/projects/duslang.png",
+        link: "https://duslang.netlify.app/",
+    },
 ]
 
 export function Projects() {
