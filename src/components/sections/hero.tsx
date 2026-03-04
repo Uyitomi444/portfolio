@@ -3,7 +3,6 @@
 import { motion } from "framer-motion"
 import { ArrowDown, FileText } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { SplineScene } from "@/components/ui/spline-scene"
 
 export function Hero() {
     return (
@@ -39,25 +38,36 @@ export function Hero() {
                     </div>
                 </motion.div>
 
-                {/* Right Side: Spline 3D Scene */}
-                <div className="order-1 md:order-2 flex justify-center md:justify-end h-[300px] md:h-[600px] w-full relative">
-                    <SplineScene
-                        scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-                        className="w-full h-full"
+                {/* Right Side: Photo on Circle */}
+                <div className="order-1 md:order-2 flex justify-center md:justify-end items-center h-[340px] md:h-[560px] w-full relative">
+                    <motion.div
+                        initial={{ scale: 0.8, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+                        className="absolute z-0 h-[260px] w-[260px] rounded-full bg-blue-500/10 dark:bg-blue-400/15 md:h-[380px] md:w-[380px] lg:h-[450px] lg:w-[450px]"
+                    ></motion.div>
+                    <motion.img
+                        src="/profile.jpg"
+                        alt="Uyitomi Adebiyi"
+                        className="relative z-10 h-auto w-56 object-cover md:w-64 scale-125 lg:w-80"
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.4 }}
                     />
                 </div>
             </div>
 
+            {/* Scroll indicator */}
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 1, duration: 1 }}
+                transition={{ delay: 1.4, duration: 1 }}
                 className="absolute bottom-10 left-1/2 -translate-x-1/2"
             >
                 <ArrowDown className="w-6 h-6 text-muted-foreground animate-bounce" />
             </motion.div>
 
-            {/* Ambient Background Gradient (Optional enhancement for premium feel) */}
+            {/* Ambient background gradient */}
             <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-primary/5 blur-[120px] rounded-full -z-10 pointer-events-none" />
         </section>
     )
