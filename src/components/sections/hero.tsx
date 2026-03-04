@@ -38,22 +38,29 @@ export function Hero() {
                     </div>
                 </motion.div>
 
-                {/* Right Side: Photo on Circle */}
-                <div className="order-1 md:order-2 flex justify-center md:justify-end items-center h-[340px] md:h-[560px] w-full relative">
+                {/* Right Side: Refined Photo in Circle */}
+                <div className="order-1 md:order-2 flex justify-center md:justify-end items-center h-[340px] md:h-[560px] w-full relative group">
+                    {/* Background Glow/Circle */}
                     <motion.div
                         initial={{ scale: 0.8, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-                        className="absolute z-0 h-[260px] w-[260px] rounded-full bg-blue-500/10 dark:bg-blue-400/15 md:h-[380px] md:w-[380px] lg:h-[450px] lg:w-[450px]"
-                    ></motion.div>
-                    <motion.img
-                        src="/profile.jpg"
-                        alt="Uyitomi Adebiyi"
-                        className="relative z-10 h-auto w-56 object-cover md:w-64 scale-125 lg:w-80"
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.4 }}
+                        className="absolute z-0 h-[280px] w-[280px] md:h-[400px] md:w-[400px] lg:h-[480px] lg:w-[480px] rounded-full bg-gradient-to-tr from-blue-500/20 to-indigo-500/10 dark:from-blue-400/15 dark:to-indigo-400/5 blur-sm"
                     />
+
+                    {/* Image Container with circular crop */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.4 }}
+                        className="relative z-10 h-[260px] w-[260px] md:h-[380px] md:w-[380px] lg:h-[450px] lg:w-[450px] rounded-full overflow-hidden border-4 border-background/50 shadow-2xl"
+                    >
+                        <img
+                            src="/profile.jpg"
+                            alt="Uyitomi Adebiyi"
+                            className="w-full h-full object-cover object-top scale-110 transition-transform duration-500 group-hover:scale-115"
+                        />
+                    </motion.div>
                 </div>
             </div>
 
