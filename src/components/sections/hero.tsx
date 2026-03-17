@@ -13,12 +13,7 @@ export function Hero() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className={cn(
-                        "fixed top-0 w-full z-50 transition-all duration-300",
-                        scrolled
-                            ? "bg-black/95 border-b border-border/50 py-2 shadow-lg backdrop-blur-md"
-                            : "bg-transparent py-4 md:py-6"
-                    )}
+                    className="flex flex-col gap-6 text-center md:text-left"
                 >
                     <span className="text-muted-foreground text-lg tracking-wide">
                         My name is Uyitomi.

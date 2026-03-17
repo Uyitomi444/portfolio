@@ -7,6 +7,13 @@ import { ExternalLink } from "lucide-react"
 
 const projects = [
     {
+        title: "TravelScape",
+        description: "A premium travel discovery platform featuring curated destinations, travel guides, and a seamless discovery interface for extraordinary adventures.",
+        tags: ["React", "Tailwind CSS", "UX/UI Design"],
+        image: "/projects/travelscape.png",
+        link: "https://travelscapee.netlify.app/",
+    },
+    {
         title: "Aurea",
         description: "Timeless heirloom pieces crafted for modern royalty. Each piece in the Imperial Gold Series carries centuries of artisan heritage — sculpted, polished, and set by hand.",
         tags: ["Luxury Jewelry", "Handcrafted", "Heritage"],
